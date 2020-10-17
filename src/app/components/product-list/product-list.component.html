@@ -1,0 +1,16 @@
+<h1 class="animated fadeIn fast">Artesanias de Jardin </h1>
+<hr>
+<div class="card-columns ">
+    <div *ngFor="let artesania of artesanias; let i = index" class="card animated fadeIn">
+        <img [src]="artesania.img" class="card-img-top" width="300" height="300" [alt]="artesania.nombre">
+        <div class="card-body ">
+            <h5 class="card-title ">{{ artesania.nombre }}</h5>
+            <p class="card-text "><small class="text-muted "><b>Largo </b>{{ artesania.largo }}</small></p>
+            <p class="card-text "><small class="text-muted "><b>Alto </b>{{ artesania.alto }}</small></p>
+            <p class="card-text "><small class="text-muted "><b>Ancho </b>{{ artesania.ancho }}</small></p>
+            <p class="card-text "><small class="text-muted "><b>Precio </b>{{ artesania.precio | currency }}</small></p>
+            <p class="card-text "><small class="text-muted "><b>De </b>{{ artesania.materia_prima }}</small></p>
+            <p class="card-text "><small class="text-muted ">Stock <i *ngIf='artesania.stock!=0' class="far fa-check-circle"></i><i *ngIf='artesania.stock==0' class="far fa-times-circle"></i></small></p>
+        </div>
+    </div>
+</div>
