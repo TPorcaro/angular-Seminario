@@ -1,26 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { APP_ROUTING } from './app.routes';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+// Components
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+import { ProductsComponent } from './components/products/products.component';
+import { AboutComponent } from './components/about/about.component';
 // Servicio
 import { ProductListService } from './services/product-list.services';
-import { HomeComponent } from './components/home/home.component';
-import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     NavbarComponent,
-    HomeComponent,
-    FooterComponent
+    FooterComponent,
+    ProductsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    APP_ROUTING
+    FormsModule,
   ],
   providers: [
     ProductListService

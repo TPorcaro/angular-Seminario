@@ -8,6 +8,7 @@ export interface Artesania{
     img: string;
     materia_prima: string;
     stock: number;
+    quantity: number;
 }
 @Injectable()
 export class ProductListService {
@@ -24,6 +25,7 @@ export class ProductListService {
           img: 'assets/images/mesa-de-cultivo.png',
           materia_prima : 'Saligna',
           stock: 0,
+          quantity: 0,
         },
         {
             nombre: 'Rack Organizador de macetas',
@@ -34,6 +36,7 @@ export class ProductListService {
             img: 'assets/images/rack-organizador.png',
             materia_prima : 'Saligna',
             stock: 1,
+            quantity: 0,
           },
           {
           nombre: 'Maceta Sweet',
@@ -44,6 +47,7 @@ export class ProductListService {
           img: 'assets/images/maceta-sweet.png',
           materia_prima : 'Saligna',
           stock: 5,
+          quantity: 0,
         },
         {
             nombre: 'Grilla con estantes',
@@ -54,6 +58,7 @@ export class ProductListService {
             img: 'assets/images/grilla-estantes.png',
             materia_prima : 'Saligna',
             stock: 2,
+            quantity: 0,
           },
           {
             nombre: 'Macetero Nordico',
@@ -64,6 +69,7 @@ export class ProductListService {
             img: 'assets/images/macetero-nordico.png',
             materia_prima : 'Saligna',
             stock: 7,
+            quantity: 0,
           },
           {
             nombre: 'Cajon de Siembra',
@@ -74,6 +80,7 @@ export class ProductListService {
             img: 'assets/images/cajon-siembra.png',
             materia_prima : 'Saligna',
             stock: 3,
+            quantity: 0,
           },
       ];
     getArtesanias(){

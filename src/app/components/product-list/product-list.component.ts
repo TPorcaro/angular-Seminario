@@ -17,5 +17,27 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
   this.artesanias = this.artesaniaService.getArtesanias();
   }
+  addQuantity(artesania: Artesania): void{
+    if (artesania.stock > artesania.quantity){
+      artesania.quantity++;
+    }
+    else{
+      this.alertNoStock();
+    }
+  }
+  decreaseQuantity(artesania: Artesania): void{
+    if (artesania.quantity > 0){
+      artesania.quantity--;
+    }
+  }
+  changeQuantity(event, artesania: Artesania){
+    if (event.target.value > artesania.stock){
+      this.alertNoStock();
+      artesania.quantity = artesania.stock;
+    }
+  }
 
+  alertNoStock(){
+    alert('No tenemos tanto stock');
+  }
 }
