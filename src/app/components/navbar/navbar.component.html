@@ -8,6 +8,10 @@
                 <a class="nav-link" [routerLink]="['products']">Productos</a>
             </li>
             <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['cart']"><i class="fa icon" style="font-size:24px">&#xf07a;</i>
+                    <span class='badge badge-warning' id='lblCartCount'>{{cartLenght}}</span></a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
                 <a class="nav-link" [routerLink]="['about']">Quienes Somos</a>
             </li>
         </ul>

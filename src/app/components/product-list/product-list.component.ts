@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductListService, Artesania } from '../../services/product-list.services';
-// import { Router } from '@angular/router';
-// import { Route } from '@angular/compiler/src/core';
+import { ProductCartService } from '../../services/product-cart.service';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -12,32 +11,17 @@ export class ProductListComponent implements OnInit {
 
   constructor(
     private artesaniaService: ProductListService,
-    // private router = Router
+    private cart: ProductCartService
   ) { }
   ngOnInit(): void {
   this.artesanias = this.artesaniaService.getArtesanias();
   }
-  addQuantity(artesania: Artesania): void{
-    if (artesania.stock > artesania.quantity){
-      artesania.quantity++;
-    }
-    else{
-      this.alertNoStock();
-    }
+  maxReached(text: string){
+    alert(text);
   }
-  decreaseQuantity(artesania: Artesania): void{
-    if (artesania.quantity > 0){
-      artesania.quantity--;
-    }
-  }
-  changeQuantity(event, artesania: Artesania){
-    if (event.target.value > artesania.stock){
-      this.alertNoStock();
-      artesania.quantity = artesania.stock;
-    }
-  }
-
-  alertNoStock(){
-    alert('No tenemos tanto stock');
+  addToCart(artesania: Artesania){
+    this.cart.addToCart(artesania);
+    artesania.stock -= artesania.quantity;
+    artesania.quantity = 0;
   }
 }

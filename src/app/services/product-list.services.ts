@@ -13,7 +13,6 @@ export interface Artesania{
 @Injectable()
 export class ProductListService {
     constructor(){
-        console.log('service listo para usarse');
     }
     private artesanias: Artesania[] = [
         {

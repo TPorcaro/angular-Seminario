@@ -7,19 +7,20 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-
-import { ProductsComponent } from './components/products/products.component';
 import { AboutComponent } from './components/about/about.component';
 // Servicio
 import { ProductListService } from './services/product-list.services';
+import { InputIntComponent } from './components/input-int/input-int.component';
+import { ProductCartComponent } from './components/product-cart/product-cart.component';
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     NavbarComponent,
     FooterComponent,
-    ProductsComponent,
-    AboutComponent
+    AboutComponent,
+    InputIntComponent,
+    ProductCartComponent
   ],
   imports: [
     BrowserModule,
