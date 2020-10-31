@@ -10,16 +10,15 @@ import { ProductCartService } from '../../services/product-cart.service';
 })
 export class NavbarComponent implements OnInit {
 
-  cartProducts$: Observable<Artesania[]>;
-  cartLenght = -1;
+  cartQuantity$: Observable<number>;
+  quantity: number;
   constructor(
     private cart: ProductCartService,
   ) {
-    this.cartProducts$ = cart.cartProducts.asObservable();
-    this.cartProducts$.forEach(product => {
-      this.cartLenght++;
+    this.cartQuantity$ = cart.cartQuantity.asObservable();
+    this.cartQuantity$.subscribe(value => {
+      this.quantity = value;
     });
-    console.log(this.cartLenght);
    }
 
   ngOnInit(): void {

@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { Observable } from 'rxjs';
 import { ProductCartService } from '../../services/product-cart.service';
 import { Artesania } from '../../services/product-list.services';
+import swal from 'sweetalert';
 
 
 @Component({
@@ -23,8 +24,7 @@ export class ProductCartComponent implements OnInit {
   ngOnInit(): void {
   }
   submitCart(){
-    console.log(this.total$);
     this.cart.submitCart();
-    alert('Gracias Por su Compra');
+    swal('Gracias por su compra!', '', 'success');
   }
 }
