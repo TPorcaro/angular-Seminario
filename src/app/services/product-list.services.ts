@@ -21,7 +21,7 @@ export class ProductListService {
           alto: '105cm',
           ancho: '30cm',
           precio: 4500,
-          img: 'assets/images/mesa-de-cultivo.png',
+          img: 'https://cdn.jsdelivr.net/gh/TPorcaro/angular-Seminario@master/src/assets/images/mesa-de-cultivo.png',
           materia_prima : 'Saligna',
           stock: 0,
           quantity: 0,
@@ -32,7 +32,7 @@ export class ProductListService {
             alto: '80cm',
             ancho: '30cm',
             precio: 2400,
-            img: 'assets/images/rack-organizador.png',
+            img: 'https://cdn.jsdelivr.net/gh/TPorcaro/angular-Seminario@master/src/assets/images/rack-organizador.png',
             materia_prima : 'Saligna',
             stock: 1,
             quantity: 0,
@@ -43,7 +43,7 @@ export class ProductListService {
           alto: '15cm',
           ancho: '30cm',
           precio: 400,
-          img: 'assets/images/maceta-sweet.png',
+          img: 'https://cdn.jsdelivr.net/gh/TPorcaro/angular-Seminario@master/src/assets/images/maceta-sweet.png',
           materia_prima : 'Saligna',
           stock: 5,
           quantity: 0,
@@ -54,7 +54,7 @@ export class ProductListService {
             alto: '55cm',
             ancho: '30cm',
             precio: 1800,
-            img: 'assets/images/grilla-estantes.png',
+            img: 'https://cdn.jsdelivr.net/gh/TPorcaro/angular-Seminario@master/src/assets/images/grilla-estantes.png',
             materia_prima : 'Saligna',
             stock: 2,
             quantity: 0,
@@ -65,7 +65,7 @@ export class ProductListService {
             alto: '45cm',
             ancho: '30cm',
             precio: 450,
-            img: 'assets/images/macetero-nordico.png',
+            img: 'https://cdn.jsdelivr.net/gh/TPorcaro/angular-Seminario@master/src/assets/images/macetero-nordico.png',
             materia_prima : 'Saligna',
             stock: 7,
             quantity: 0,
@@ -76,12 +76,14 @@ export class ProductListService {
             alto: '33cm',
             ancho: '30cm',
             precio: 1400,
-            img: 'assets/images/cajon-siembra.png',
+            img: 'https://cdn.jsdelivr.net/gh/TPorcaro/angular-Seminario@master/src/assets/images/cajon-siembra.png',
             materia_prima : 'Saligna',
             stock: 3,
             quantity: 0,
           },
       ];
+
+      //Originalmente las imagenes estaban guardadas en assets/images pero stackblitz no las visualizaba
     getArtesanias(){
         return this.artesanias;
     }
